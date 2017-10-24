@@ -15,7 +15,7 @@ class AddUserSettingAutoSignTicketField extends Migration
     {
         Schema::table('user_settings', function($table){
             $table->boolean('auto_sign_ticket')
-              ->nullable()->after('lead_assigned_notification');
+              ->default(false)->after('lead_assigned_notification');
         });
     }
 
